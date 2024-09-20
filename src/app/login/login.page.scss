@@ -1,0 +1,100 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Mantém a cobertura total da tela */
+  }
+  
+  .transposed-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    filter: blur(1.5px);
+    box-shadow: 0 -1px 10px rgba(44, 44, 44, 0.36);
+    z-index: 1;
+    border: solid 1px rgb(85, 85, 85);
+    
+    /* Adicionando animação */
+    animation: float 15s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Movimenta a imagem para cima */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; /* Altura ajustada da overlay */
+    background-color: rgba(217, 217, 217, 0.8); /* Fundo translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 62px;
+    gap: 15px;
+  }
+  
+  .explore-btn {
+    background-color: rgb(2, 19, 45);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 60%;
+    height: 14%;
+    font-size: 20px;
+    
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* Movimenta a imagem para cima */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  .explore-btn:hover {
+    background-color: rgb(3, 39, 94);
+  }
+  
+  .form{
+    display: flex;
+    flex-direction: column;  /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center;     /* Centraliza os itens horizontalmente */
+    padding: 20px;
+    border-radius: 8px;      /* Bordas arredondadas */
+    max-width: 400px;        /* Largura máxima do formulário */
+    width: 80%;       
+  }
+
+  ion-input {
+    margin-bottom: 16px; /* Espaço entre os campos */
+    --border-width: 2px;
+    --border-color: black;
+  }

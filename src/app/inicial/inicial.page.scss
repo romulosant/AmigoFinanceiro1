@@ -1,0 +1,93 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Mantém a cobertura total da tela */
+}
+
+.transposed-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  filter: blur(1.5px);
+  box-shadow: 0 -1px 10px rgba(44, 44, 44, 0.36);
+  z-index: 1;
+  border: solid 1px rgb(85, 85, 85);
+
+  animation: float 15s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Movimenta a imagem para cima */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Altura ajustada da overlay */
+  background-color: rgba(217, 217, 217, 0.8); /* Fundo translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: px;
+  padding: 10%;
+}
+
+h1 {
+  color: #000;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  color: #5e5e5e;
+  text-align: center;
+  font-size: 14px;
+}
+
+.explore-btn {
+  background-color: rgb(2, 19, 45);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 60%;
+  height: 10%;
+  font-size: 14px;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Movimenta a imagem para cima */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.explore-btn:hover {
+  background-color: rgb(3, 39, 94);
+}

@@ -1,0 +1,90 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Mantém a cobertura total da tela */
+  }
+  
+  .transposed-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    object-fit: cover;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    filter: blur(1.5px);
+    box-shadow: 0 -1px 10px rgba(44, 44, 44, 0.36);
+    z-index: 1;
+    border: solid 1px rgb(85, 85, 85);
+  
+    /* Adicionando animação */
+    animation: float 15s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Movimenta a imagem para cima */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Altura ajustada da overlay */
+    background-color: rgba(217, 217, 217, 0.8); /* Fundo translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 62px;
+    gap: 15px;
+  }
+  
+  .formulario-cadastro {
+    width: 101%;
+    margin-top: 30%;
+    padding: 6%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  ion-input {
+    margin-bottom: 16px; /* Espaço entre os campos */
+    --border-width: 2px;
+  }
+  
+  /* Media query para telas menores */
+  @media (max-width: 600px) {
+    ion-input {
+      font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+  
+    ion-button {
+      font-size: 14px; /* Ajusta o botão em telas pequenas */
+      --border-width: 500px solid black;
+    }
+  }
+  
+  .ion-padding {
+    --background: #ffe4c400;
+  }
+  
+  ion-button {
+    width: 50%;
+    --background: #02132d;
+    --border-radius: 53px;
+    margin-left: 24%;
+    color: aliceblue;
+  }
+  

@@ -1,0 +1,125 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Mantém a cobertura total da tela */
+}
+
+.transposed-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56%;
+  object-fit: cover;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  filter: blur(1.5px);
+  box-shadow: 0 -1px 10px rgba(44, 44, 44, 0.36);
+  z-index: 1;
+  border: solid 1px rgb(85, 85, 85);
+
+  /* Adicionando animação */
+  animation: float 15s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Movimenta a imagem para cima */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Altura ajustada da overlay */
+  background-color: rgba(217, 217, 217, 0.8); /* Fundo translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 62px;
+  gap: 15px;
+}
+
+.explore-btn {
+  background-color: rgb(2, 19, 45);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 60%;
+  height: 10%;
+  font-size: 14px;
+}
+
+.explore-btn:hover {
+  background-color: rgb(3, 39, 94);
+}
+
+.explore-btn2 {
+  background-color: rgb(118, 118, 118);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 60%;
+  height: 10%;
+  font-size: 14px;
+}
+
+.explore-btn:hover {
+  background-color: rgb(3, 39, 94);
+}
+
+.icons {
+    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaço entre os botões */
+}
+
+.icons button {
+  background-color: #ffffff; /* Cor de fundo dos botões */
+  border: 2px solid #cccccc; /* Cor da borda */
+  border-radius: 50%; /* Tornar os botões circulares */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px; /* Tamanho do ícone */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.icons button:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  border-color: #999999; /* Cor da borda ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.icons i {
+  color: #333; /* Cor do ícone */
+}
+
+.icons button:first-child i {
+  color: #db4437; /* Cor do ícone do Google */
+}
+
+.icons button:nth-child(2) i {
+  color: #4267b2; /* Cor do ícone do Facebook */
+}
+
+.icons button:last-child i {
+  color: #333; /* Cor do ícone do GitHub */
+}
