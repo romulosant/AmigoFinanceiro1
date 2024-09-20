@@ -4,8 +4,93 @@
 
     <div class="overlay">
       <ion-content class="ion-padding">
+        <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()" class="formulario-cadastro">
+          <!-- Nome -->
+          <ion-input
+            type="text"
+            fill="outline"
+            formControlName="nome"
+            placeholder="Digite seu nome"
+            label="Nome"
+            labelPlacement="floating"
+            ngModel
+            errorText="Nome inválido"
+          ></ion-input>
 
-       
+          <!-- Email -->
+          <ion-input
+            type="email"
+            fill="outline"
+            formControlName="email"
+            placeholder="Digite seu email"
+            label="Email"
+            labelPlacement="floating"
+            ngModel
+            errorText="Email inválido"
+          ></ion-input>
+
+          <!-- Data de Nascimento -->
+          <ion-input
+            type="date"
+            fill="outline"
+            formControlName="dataNascimento"
+            placeholder="Selecione sua data de nascimento"
+            label="Data de Nascimento"
+            labelPlacement="floating"
+            ngModel
+            errorText="Data inválida"
+          ></ion-input>
+
+          <!-- CPF -->
+          <ion-input
+            type="text"
+            fill="outline"
+            formControlName="cpf"
+            placeholder="Digite seu CPF"
+            label="CPF"
+            labelPlacement="floating"
+            ngModel
+            errorText="CPF inválido"
+          ></ion-input>
+
+          <!-- Login -->
+          <ion-input
+            type="text"
+            fill="outline"
+            formControlName="login"
+            placeholder="Crie seu login"
+            label="Login"
+            labelPlacement="floating"
+            ngModel
+            errorText="Login inválido"
+          ></ion-input>
+
+          <!-- Senha -->
+          <ion-input
+            type="password"
+            fill="outline"
+            formControlName="senha"
+            placeholder="Crie sua senha"
+            label="Senha"
+            labelPlacement="floating"
+            ngModel
+            errorText="A senha deve ter pelo menos 6 caracteres"
+          ></ion-input>
+
+          <!-- Confirmar Senha -->
+          <ion-input
+            type="password"
+            fill="outline"
+            formControlName="confirmarSenha"
+            placeholder="Confirme sua senha"
+            label="Confirmar Senha"
+            labelPlacement="floating"
+            ngModel
+            errorText="As senhas não coincidem"
+          ></ion-input>
+
+          <ion-button expand="block" type="submit" [disabled]="cadastroForm.invalid">Cadastrar</ion-button>
+        </form>
       </ion-content>
     </div>
   </div>
