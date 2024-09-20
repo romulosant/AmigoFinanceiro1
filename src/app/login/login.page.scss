@@ -46,8 +46,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 62px;
-    gap: 15px;
   }
   
   .explore-btn {
@@ -58,8 +56,11 @@
     margin-top: 10px;
     cursor: pointer;
     width: 60%;
-    height: 14%;
-    font-size: 20px;
+    height: 10%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     animation: float 5s ease-in-out infinite;
   }
@@ -76,7 +77,9 @@
     }
   }
   
-  
+  a{
+    font-size: 12px;
+  }
   
   .explore-btn:hover {
     background-color: rgb(3, 39, 94);
@@ -96,5 +99,6 @@
   ion-input {
     margin-bottom: 16px; /* Espaço entre os campos */
     --border-width: 2px;
-    --border-color: black;
+    --border-color: rgb(254, 254, 254);
+    font-size: 14px;
   }

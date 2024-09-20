@@ -17,4 +17,8 @@ export class ExplorarPage {
   irParaCadastro() {
     this.router.navigate(['/cadastro']);
   }
+
+  irParaTabs() {
+    this.router.navigate(['/tabs']);
+  }
 }
