@@ -1,0 +1,85 @@
+.image-container {
+    position: relative;
+    /* Mudado de absolute para relative para permitir o posicionamento adequado dos filhos */
+    width: 100%;
+    height: 100%;
+    /* Mantém a cobertura total da tela */
+}
+
+.transposed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* Altura da imagem */
+    object-fit: cover;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 -1px 10px rgba(44, 44, 44, 0.36);
+    z-index: 1;
+    /* Z-index menor para que a imagem fique atrás da overlay */
+    border: solid 1px rgb(85, 85, 85);
+    background-color: #02132D;
+}
+
+.overlay {
+    position: absolute;
+    /* Mudado de relative para absolute para posicionar sobre a imagem */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    /* Altura da overlay */
+
+    background-color: rgb(217, 217, 217);
+    /* Fundo translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    /* Z-index maior para que a overlay fique sobre a imagem */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.container {
+    position: absolute;
+    /* Mantém o elemento fixo */
+    top: 2vh;
+    /* Define a posição a partir do topo em relação à altura da viewport */
+    left: 2.5vw;
+    /* Define a posição a partir da esquerda */
+    width: 95vw;
+    /* Usa a largura da viewport para garantir responsividade */
+    height: auto;
+    /* Altura ajustável conforme o conteúdo */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* Garante que o elemento esteja sobre outros */
+}
+
+ion-icon {
+    font-size: 210px;
+}
+
+ion-list {
+    width: 100%;
+    background-color: transparent;
+}
+
+ion-item {
+    --background: transparent;
+    /* Torna o fundo transparente */
+    --border: 0;
+}
+
+ion-button {
+    margin: auto;
+    border-radius: 50%;
+}
